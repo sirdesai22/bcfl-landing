@@ -12,7 +12,7 @@ const LandingPage = () => {
         {/* Navigation */}
         <nav className="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-lg border-b border-white/10">
           <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-            <div className="text-xl font-bold">BlockFed</div>
+            <div className="text-xl font-bold">SecureFL</div>
             <Button
               variant="secondary"
               className="bg-purple-600 hover:bg-purple-700 text-white"
@@ -31,7 +31,7 @@ const LandingPage = () => {
                 Secure Federated Learning with Blockchain
               </h1>
               <p className="text-xl md:text-2xl text-gray-400 mb-8">
-                Revolutionizing distributed machine learning with
+                Revolutionizing distributed independent machine learning with
                 blockchain-powered data validation and security
               </p>
               <Button className="bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-6 rounded-full">
@@ -67,7 +67,7 @@ const LandingPage = () => {
                 <CardContent className="p-6">
                   <Network className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-white">
-                    Distributed Learning
+                    Independent Learning
                   </h3>
                   <p className="text-gray-400">
                     Enable multiple nodes to contribute to model training while
@@ -204,7 +204,7 @@ const LandingPage = () => {
         {/* Footer */}
         <footer className="py-8 border-t border-white/10">
           <div className="container mx-auto px-4 text-center text-gray-400">
-            <p>&copy; 2024 BlockFed. All rights reserved.</p>
+            <p>&copy; 2024 SecureFL. All rights reserved.</p>
           </div>
         </footer>
       </div>
