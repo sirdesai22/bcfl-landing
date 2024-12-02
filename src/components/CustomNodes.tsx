@@ -13,7 +13,7 @@ const nodeStyles = {
   alignItems: 'center',
 };
 
-export function ChildNode({ data }) {
+export function ChildNode({ data }:any) {
   return (
     <div style={{ ...nodeStyles, background: '#ff6b6b' }}>
       <Handle type="source" position={Position.Right} />
@@ -22,7 +22,7 @@ export function ChildNode({ data }) {
   );
 }
 
-export function BlockchainNode({ data }) {
+export function BlockchainNode({ data }:any) {
   return (
     <div style={{ ...nodeStyles, background: '#4ecdc4' }}>
       <Handle type="target" position={Position.Left} />
@@ -32,7 +32,7 @@ export function BlockchainNode({ data }) {
   );
 }
 
-export function ValidatorNode({ data }) {
+export function ValidatorNode({ data }:any) {
   return (
     <div style={{ ...nodeStyles, background: '#45b7d1' }}>
       <Handle type="target" position={Position.Left} />
@@ -42,7 +42,7 @@ export function ValidatorNode({ data }) {
   );
 }
 
-export function MainModelNode({ data }) {
+export function MainModelNode({ data }:any) {
   return (
     <div style={{ ...nodeStyles, background: '#6c5ce7' }}>
       <Handle type="target" position={Position.Left} />

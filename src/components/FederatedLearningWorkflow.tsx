@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import ReactFlow, {
-  MiniMap,
   Controls,
   Background,
   useNodesState,
   useEdgesState,
   addEdge,
+  BackgroundVariant,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { ChildNode, BlockchainNode, ValidatorNode, MainModelNode } from './CustomNodes';
@@ -35,10 +35,10 @@ const initialEdges = [
 ];
 
 export default function FederatedLearningWorkflow() {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes, _setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
-  const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
+  const onConnect = useCallback((params:any) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
   return (
     <div style={{ width: '100%', height: '500px' }}>
@@ -55,7 +55,7 @@ export default function FederatedLearningWorkflow() {
       >
         <Controls />
         {/* <MiniMap /> */}
-        <Background variant="dots" gap={12} size={1} />
+        <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
       </ReactFlow>
       {/* <div style={{ position: 'absolute', bottom: '10px', left: '10px', background: 'white', padding: '10px', borderRadius: '5px' }}>
         <h3>Legend</h3>
